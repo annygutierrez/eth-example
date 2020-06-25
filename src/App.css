@@ -28,6 +28,108 @@
   color: #61dafb;
 }
 
+html,
+body {
+  background: #222;
+}
+
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+*::selection {
+  color: white;
+  background: tomato;
+}
+
+.loginButton {
+  outline: none !important;
+  border-radius: 13;
+  border: 0 !important;
+  background: #CC2C21;
+  color: white;
+  transition: .25s background ease-in-out;
+  cursor: pointer;
+}
+
+.loginButton:hover,
+.loginButton:focus,
+.loginButton:active {
+  background: rgb(134, 90, 87);
+}
+
+.copyright {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: #777;
+  margin-top: 100px;
+}
+
+.form-control {
+  transition: .25s border ease-in-out;
+  border-radius: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent;
+  color: white;
+  border: 0;
+  border-bottom: 2px solid #444;
+  font-size: 20px;
+}
+
+.form-control:focus {
+  border-bottom-color: #CC2C21;
+}
+
+.errorMessages {
+  margin-top: 50px;
+  padding: 25px;
+  color: #A94442;
+  background: #202020;
+  border: 0 !important;
+  text-shadow: none !important;
+  box-shadow: 0 0 10px #151515;
+  text-align: center;
+}
+
+.form-control:not(.touched)+.floater:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  font-size: 20px;
+  color: #666;
+  pointer-events: none;
+  transition: .25s all ease-in-out;
+}
+
+.form-control.touched+.floater:before,
+#username:focus+.floater:before,
+#username:not(:placeholder-shown)+.floater:before,
+#password:focus+.floater:before,
+#password:not(:placeholder-shown)+.floater:before {
+  position: absolute;
+  top: -20px;
+  font-size: 14px;
+  color: #FFF;
+}
+p{color:white}
+#username+.floater:before,
+#username:focus+.floater:before {
+  content: "Address from";
+}
+
+#password+.floater:before,
+#password:focus+.floater:before {
+  content: "Private key";
+}
+
+.link,
+.link:hover {
+  color: #CC2C21;
+  text-decoration: none;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
